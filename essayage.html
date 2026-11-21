@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleIA - Essayage virtuel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-sidebar">
+    <aside class="desktop-sidebar">
+        <a href="accueil.html" class="desktop-logo">
+            <img src="../assets/icons/logo_cintre.png" alt="Logo StyleIA"><span>StyleIA</span></a>
+        <nav class="desktop-menu">
+            <a href="accueil.html" class="desktop-nav-item"><span>⌂</span><span>Accueil</span></a>
+            <a href="explorer.html" class="desktop-nav-item"><span>⌕</span><span>Explorer</span></a>
+            <a href="favoris.html" class="desktop-nav-item"><span>♡</span><span>Favoris</span></a>
+            <a href="essayage.html" class="desktop-nav-item active"><span>✧</span><span>Essayage virtuel</span></a>
+            <a href="profil.html" class="desktop-nav-item"><span>♙</span><span>Profil</span></a>
+        </nav>
+    </aside>
+    <main class="tryon-page">
+        <header class="tryon-header">
+            <div>
+                <h1>Essayage virtuel</h1>
+                <p>Essaie tes tenues grâce à l'IA</p>
+            </div>
+            <a href="profil.html" class="profile-avatar">
+                <img src="../assets/images/Profil.png" alt="Mon profil"></a>
+        </header>
+        <section class="camera-section">
+            <div class="camera-heading">
+                <h2>Ton espace d'essayage</h2>
+                <p>Place-toi devant la caméra pour commencer.</p>
+            </div>
+            <div class="camera-container">
+                <video id="camera" autoplay playsinline></video>
+                <div class="camera-placeholder" id="cameraPlaceholder"><span>✧</span>
+                    <h3>Ta caméra apparaîtra ici</h3>
+                    <p>Active ta caméra pour commencer ton essayage.</p>
+                </div>
+            </div>
+            <div class="camera-actions">
+                <button type="button" id="startCamera" class="camera-button">
+                    Activer la caméra
+                </button>
+                <button type="button" id="takePhoto" class="capture-button" disabled>
+                    Prendre une photo
+                </button>
+            </div>
+        </section>
+        <section class="captured-section" id="capturedSection" hidden>
+            <h2>Ta photo</h2>
+            <img id="capturedPhoto" alt="Photo prise pour l'essayage">
+
+            <button type="button" id="retakePhoto">Reprendre une photo</button>
+        </section>
+        <section class="outfit-section">
+            <div class="section-heading">
+                <h2>Choisis ta tenue</h2>
+                <a href="explorer.html">Voir tout</a>
+            </div>
+            <div class="outfit-list">
+                <button type="button" class="outfit-item">
+                    <img src="../assets/images/Robe.jpg" alt="Robe"><span>Robes</span></button>
+                <button type="button" class="outfit-item">
+                    <img src="../assets/images/cuir.jpg" alt="Look élégant"><span>Looks élégants</span></button>
+                <button type="button" class="outfit-item">
+                    <img src="../assets/images/hauts.jpg" alt="Hauts">
+                    <span>Hauts</span>
+                </button>
+            </div>
+            <button type="button" class="tryon-button" id="tryOnButton" disabled>Essayer avec l'IA</button>
+        </section>
+        <nav class="bottom-navigation">
+            <a href="accueil.html" class="nav-item">
+                <span>⌂</span>
+                <small>Accueil</small>
+            </a>
+            <a href="explorer.html" class="nav-item">
+                <span>⌕</span>
+                <small>Explorer</small></a>
+            <a href="favoris.html" class="nav-item">
+                <span>♡</span>
+                <small>Favoris</small>
+            </a>
+            <a href="profil.html" class="nav-item">
+                <span>♙</span>
+                <small>Profil</small>
+            </a>
+        </nav>
+    </main>
+    <script src="../js/essayage.js"></script>
+</body>
+</html>
