@@ -2063,6 +2063,18 @@ body {
     cursor: not-allowed;
 }
 
+.capture-button {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.capture-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /* =====================================
    VERSION TABLETTE ET ORDINATEUR
 ===================================== */
@@ -2117,7 +2129,15 @@ body {
     }
 
 }
+.outfit-item.selected {
+    border: 2px solid #8000FF;
+    background: #DED6F5;
+    transform: translateY(-3px);
+}
 
+.outfit-item {
+    transition: 0.2s ease;
+}
 
 /* ADAPTATION MOBILE */
 
